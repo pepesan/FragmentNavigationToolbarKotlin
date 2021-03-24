@@ -18,7 +18,7 @@ class SecondFragment : AppFragment() {
     ): View? {
         // Inflate the layout for this fragment
         activity?.setTitle("Segundo")
-        //(activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true);
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true);
         setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_second, container, false)
     }
@@ -43,6 +43,9 @@ class SecondFragment : AppFragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(item.itemId == R.id.action_second_1){
+            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        }
+        if(item.itemId ==android.R.id.home) {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
         //(activity as AppCompatActivity).getSupportActionBar()?.setDisplayHomeAsUpEnabled(false);

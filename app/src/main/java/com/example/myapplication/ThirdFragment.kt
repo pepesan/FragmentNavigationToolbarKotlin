@@ -41,6 +41,9 @@ class ThirdFragment :  AppFragment() {
         if(item.itemId == R.id.action_third_volver){
             findNavController().navigate(R.id.action_thirdFragment_to_SecondFragment)
         }
+        if(item.itemId ==android.R.id.home) {
+            findNavController().navigate(R.id.action_thirdFragment_to_SecondFragment)
+        }
         //(activity as AppCompatActivity).getSupportActionBar()?.setDisplayHomeAsUpEnabled(false);
         return super.onOptionsItemSelected(item)
 
